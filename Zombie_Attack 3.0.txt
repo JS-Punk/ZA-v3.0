@@ -5053,40 +5053,40 @@ function Trig_Quest_Command_Func004Func003C takes nothing returns boolean
 	return(udg_integer16==1)
 endfunction
 
-function Trig_Quest_Command_Func004Func005C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func004C takes nothing returns boolean
 	return(udg_integer16==2)
 endfunction
 
-function Trig_Quest_Command_Func004Func006C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func005C takes nothing returns boolean
 	return(udg_integer16==3)
 endfunction
 
-function Trig_Quest_Command_Func004Func007C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func006C takes nothing returns boolean
 	return(udg_integer16==4)
 endfunction
 
-function Trig_Quest_Command_Func004Func008C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func007C takes nothing returns boolean
 	return(udg_integer16==5)
 endfunction
 
-function Trig_Quest_Command_Func004Func009C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func008C takes nothing returns boolean
 	return(udg_integer16==6)
 endfunction
 
-function Trig_Quest_Command_Func004Func010C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func009C takes nothing returns boolean
 	return(udg_integer16==7)
 endfunction
 
-function Trig_Quest_Command_Func004Func011C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func010C takes nothing returns boolean
 	return(udg_integer16==8)
 endfunction
 
-function Trig_Quest_Command_Func004Func012C takes nothing returns boolean
+function Trig_Quest_Command_Func004Func011C takes nothing returns boolean
 	return(udg_integer16==9)
 endfunction
 
-function Trig_Quest_Command_Func004Func013C takes nothing returns boolean
-	return(udg_integer16==$A)
+function Trig_Quest_Command_Func004Func012C takes nothing returns boolean
+	return(udg_integer16==10)
 endfunction
 
 function Trig_Quest_Command_Func004C takes nothing returns boolean
@@ -5104,48 +5104,48 @@ function Trig_Quest_Command_Actions takes nothing returns nothing
 		call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"Your hero is dead or you don't have a hero.|r"))
 	endif
 	if(Trig_Quest_Command_Func004C())then
-		set udg_integer16=GetRandomInt(1,$C)
+		set udg_integer16=GetRandomInt(1,10)
 		set udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]=udg_integer16
 		if(Trig_Quest_Command_Func004Func003C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 15 animals.|r"))
 			set udg_integers08[(1+GetPlayerId(GetTriggerPlayer()))]=0
-		endif
-		if(Trig_Quest_Command_Func004Func005C())then
+		endif			
+		if(Trig_Quest_Command_Func004Func004C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 50 zombies.|r"))
 			set udg_integers10[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func006C())then
+		if(Trig_Quest_Command_Func004Func005C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got the hardest quest: destroy a zombie tower (many extra points).|r"))
 			set udg_integers11[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func007C())then
+		if(Trig_Quest_Command_Func004Func006C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: cast 5 abilities.|r"))
 			set udg_integers12[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func008C())then
+		if(Trig_Quest_Command_Func004Func007C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: train 5 units.|r"))
 			set udg_integers13[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func009C())then
+		if(Trig_Quest_Command_Func004Func008C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 5 frogs.|r"))
 			set udg_integers14[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func010C())then
+		if(Trig_Quest_Command_Func004Func009C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 5 stags.|r"))
 			set udg_integers15[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func011C())then
+		if(Trig_Quest_Command_Func004Func010C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 5 raccoons.|r"))
 			set udg_integers16[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func012C())then
+		if(Trig_Quest_Command_Func004Func011C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: kill 5 rabbits.|r"))
 			set udg_integers17[(1+GetPlayerId(GetTriggerPlayer()))]=0
 		endif
-		if(Trig_Quest_Command_Func004Func013C())then
+		if(Trig_Quest_Command_Func004Func012C())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+"You got a quest: sell 4 items to the shop.|r"))
 			set udg_integers18[(1+GetPlayerId(GetTriggerPlayer()))]=0
-		endif
+		endif	
 	endif
 endfunction
 
@@ -5161,40 +5161,40 @@ function Trig_Myquest_Command_Func002Func003001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==1)
 endfunction
 
-function Trig_Myquest_Command_Func002Func005001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func004001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==2)
 endfunction
 
-function Trig_Myquest_Command_Func002Func006001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func005001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==3)
 endfunction
 
-function Trig_Myquest_Command_Func002Func007001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func006001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==4)
 endfunction
 
-function Trig_Myquest_Command_Func002Func008001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func007001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==5)
 endfunction
 
-function Trig_Myquest_Command_Func002Func009001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func008001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==6)
 endfunction
 
-function Trig_Myquest_Command_Func002Func010001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func009001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==7)
 endfunction
 
-function Trig_Myquest_Command_Func002Func011001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func010001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==8)
 endfunction
 
-function Trig_Myquest_Command_Func002Func012001 takes nothing returns boolean
+function Trig_Myquest_Command_Func002Func011001 takes nothing returns boolean
 	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==9)
 endfunction
 
-function Trig_Myquest_Command_Func002Func013001 takes nothing returns boolean
-	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==$A)
+function Trig_Myquest_Command_Func002Func012001 takes nothing returns boolean
+	return(udg_integers07[(1+GetPlayerId(GetTriggerPlayer()))]==10)
 endfunction
 
 function Trig_Myquest_Command_Func002C takes nothing returns boolean
@@ -5212,31 +5212,31 @@ function Trig_Myquest_Command_Actions takes nothing returns nothing
 		if(Trig_Myquest_Command_Func002Func003001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 15 animals. Progress: "+(I2S(udg_integers08[(1+GetPlayerId(GetTriggerPlayer()))])+"/15."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func005001())then
+		if(Trig_Myquest_Command_Func002Func004001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 50 zombies. Progress: "+(I2S(udg_integers10[(1+GetPlayerId(GetTriggerPlayer()))])+"/50."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func006001())then
+		if(Trig_Myquest_Command_Func002Func005001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: destroy a zombie tower. Progress: "+(I2S(udg_integers11[(1+GetPlayerId(GetTriggerPlayer()))])+"/1."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func007001())then
+		if(Trig_Myquest_Command_Func002Func006001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: cast 5 abilities. Progress: "+(I2S(udg_integers12[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func008001())then
+		if(Trig_Myquest_Command_Func002Func007001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: train 5 units. Progress: "+(I2S(udg_integers13[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func009001())then
+		if(Trig_Myquest_Command_Func002Func008001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 5 frogs. Progress: "+(I2S(udg_integers14[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func010001())then
+		if(Trig_Myquest_Command_Func002Func009001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 5 stags. Progress: "+(I2S(udg_integers15[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func011001())then
+		if(Trig_Myquest_Command_Func002Func010001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 5 raccoons. Progress: "+(I2S(udg_integers16[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func012001())then
+		if(Trig_Myquest_Command_Func002Func011001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: kill 5 rabbits. Progress: "+(I2S(udg_integers17[(1+GetPlayerId(GetTriggerPlayer()))])+"/5."))))
 		endif
-		if(Trig_Myquest_Command_Func002Func013001())then
+		if(Trig_Myquest_Command_Func002Func012001())then
 			call DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()),(udg_strings01[7]+("Your quest: sell 4 items to the shop. Progress: "+(I2S(udg_integers18[(1+GetPlayerId(GetTriggerPlayer()))])+"/4."))))
 		endif
 	endif
